@@ -43,7 +43,7 @@ class ItemsController < ApplicationController
 	end
 	
 	def complete
-		@item = Item.find(params [:id])
+		@item = Item.find(params[:id])
 		@item.update_attribute(:completed_at, Time.now)
 		redirect_to root_path
 	end	
